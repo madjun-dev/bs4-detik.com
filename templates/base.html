@@ -20,14 +20,15 @@
     <li class="nav-item">
       <a class="nav-link" href="/detik-populer">Detik Scraper</a>
     </li>
+      <li class="nav-item">
+      <a class="nav-link" href="/idr-rates">IDR rates</a>
+    </li>
   </ul>
 </nav>
 
-<div class="container-fluid">
-    {% for image in images %}
-        {{image|safe}}
-    <a href="{{image.find('a')['href']|safe}}">{{image.find('a').find('img')['title']|safe}}</a>
-    {% endfor %}
+<div class="container-fluid" align="center" style="margin-top:10px">
+    {% block body%}
+    {% endblock %}
 </div>
 
 </body>
